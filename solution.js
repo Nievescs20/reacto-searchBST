@@ -15,7 +15,7 @@ class TreeNode {
   }
 }
 
-function searchBST(root, val) {
+function searchBSTRecursive(root, val) {
   if (root == null) {
     return null;
   }
@@ -24,11 +24,33 @@ function searchBST(root, val) {
     return root;
   }
   if (val < root.val) {
-    return searchBST(root.left, val);
+    return searchBSTRecursive(root.left, val);
   }
   if (val > root.val) {
-    return searchBST(root.right, val);
+    return searchBSTRecursive(root.right, val);
   }
+}
+
+function searchBSTBFS(root, val) {
+  const queue = [root];
+
+  while (queue.length > 0) {
+    const currentNode = queue.shift();
+
+    if (currentNode.val === val) {
+      return currentNode;
+    }
+
+    if (currentNode.left !== null) {
+      queue.push(currentNode.left);
+    }
+
+    if (currentNode.right !== null) {
+      queue.push(currentNode.right);
+    }
+  }
+
+  return null;
 }
 
 const test = new TreeNode(
@@ -43,5 +65,7 @@ test2 = new TreeNode(
   new TreeNode(8, null, null)
 );
 
-console.log(searchBST(test, 2));
-console.log(searchBST(test, 5));
+console.log("Recursion", searchBSTRecursive(test, 2));
+console.log("Recursion", searchBSTRecursive(test, 5));
+console.log("BFS", searchBSTBFS(test, 2));
+console.log("BFS", searchBSTBFS(test, 5));
