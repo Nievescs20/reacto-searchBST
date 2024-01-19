@@ -3,7 +3,7 @@
 ## Gist
 You are given the root of a binary search tree (BST) and an integer val.
 
-Find the node in the BST that the node's value equals val and return that node. If no node in the tree exists with a value that equals val, return false
+Find the node in the BST that the node's value equals val and return that node. If no node in the tree exists with a value that equals val, return null
 
 <hr/>
 
