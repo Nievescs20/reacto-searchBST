@@ -11,10 +11,10 @@ Example 1: <br/>
 <img src="https://assets.leetcode.com/uploads/2021/01/12/tree1.jpg" alt="example-1"/>
 <br/>
 Input: root = [4,2,7,1,3], val = 2 <br/>
-Output: true
+Output: [2]
 
 Example 2:<br/>
 <img src="https://assets.leetcode.com/uploads/2021/01/12/tree2.jpg" alt="example-2"/>
 <br/>
 Input: root = [4,2,7,1,3], val = 5 <br/>
-Output: false
+Output: null

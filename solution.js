@@ -37,5 +37,11 @@ const test = new TreeNode(
   new TreeNode(7, null, null)
 );
 
+test2 = new TreeNode(
+  5,
+  new TreeNode(3, null, null),
+  new TreeNode(8, null, null)
+);
+
 console.log(searchBST(test, 2));
 console.log(searchBST(test, 5));
